@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <style type="text/css">
+        #plotButtons {
+            position: absolute;
+            left: 10px;
+            top: 50px;
+            background-color: transparent;
+            width: 1200px;
+            height: 30px;
+            z-index: 1999;
+            border: solid 1px transparent;
+            user-select: none;
+        }
+
+        #plotButtons input[type="button"] {
+            height: 25px;
+            background-color: #1188aa;
+            border: none;
+            border-radius: 3px;
+            color: #ffffff;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        #plotButtons input[type="button"]:hover {
+            background-color: #11aacc;
+            border: none;
+        }
+
+        #plotButtons input[type="button"]:focus {
+            border: none;
+            outline: none;
+        }
+
+        #plotButtons input[type="text"] {
+            height: 19px;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="plotButtons">
+        <input id="btnStraightArrow" type="button" value="直箭头" />
+        <input id="btnFineArrow" type="button" value="细直箭头" />
+        <input id="btnAssaultDirection" type="button" value="突击方向" />
+        <input id="btnAttackArrow" type="button" value="进攻方向" />
+        <input id="btnTailedAttackArrow" type="button" value="进攻方向(尾)" />
+        <input id="btnSquadCombat" type="button" value="分队战斗行动" />
+        <input id="btnTailedSquadCombat" type="button" value="分队战斗行动(尾)" />
+        <input id="btnDoubleArrow" type="button" value="钳击" />
+        <input id="btnGatheringplace" type="button" value="聚集地" />
+    </div>
+</body>
+
+</html>

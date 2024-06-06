@@ -1,0 +1,14 @@
+﻿/** 编辑节点图标 */
+.leaflet-editing-icon {
+    margin-left: -10px !important;
+    margin-top: -10px !important;
+    width: 16px !important;
+    height: 16px !important;
+    border: solid 2px red !important;
+    background-color: #ffffff50 !important;
+}
+
+/** 编辑tooltip初始位置 */
+.leaflet-draw-tooltip-single {
+    transform: translate3d(-1000px, -1000px, 0px);
+}

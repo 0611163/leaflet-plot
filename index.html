@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Leaflet</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="libs/leaflet/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="libs/leaflet-plugins/leaflet.draw/leaflet.draw.css">
+    <link rel="stylesheet" type="text/css" href="libs/element-ui/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/drawControl.css">
+    <link rel="stylesheet" type="text/css" href="css/plot.css">
+
+    <script type="text/javascript" src="libs/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="libs/leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="libs/leaflet-plugins/proj4-compressed.js"></script>
+    <script type="text/javascript" src="libs/leaflet-plugins/proj4leaflet.js"></script>
+    <script type="text/javascript" src="libs/leaflet-plugins/leaflet.baidu.js"></script>
+    <script type="text/javascript" src="libs/leaflet-plugins/leaflet.ChineseTmsProviders.js"></script>
+    <script type="text/javascript" src="libs/leaflet-plugins/leaflet.mapCorrection.js"></script>
+    <script type="text/javascript" src="libs/leaflet-plugins/Leaflet.markerRotation.js"></script>
+    <script type="text/javascript" src="libs/leaflet-plugins/leaflet.draw/leaflet.draw.js"></script>
+    <!-- 态势标绘 -->
+    <script type="text/javascript" src="js/Plots.js"></script>
+    <script type="text/javascript" src="js/PlotUtil.js"></script>
+    <script type="text/javascript" src="libs/turf/turf.min.js"></script>
+    <script type="text/javascript" src="libs/vue/vue.js"></script>
+    <script type="text/javascript" src="libs/element-ui/index.js"></script>
+    <script type="text/javascript" src="libs/vuex/vuex.min.js"></script>
+    <script type="text/javascript" src="libs/crypto-js.min.js"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div id="mouseposition"></div>
+    <div id="mapzoom"></div>
+    <div id="switchMapControl">
+        <img onclick="switchMap(0)" src="images/e-map.png" class="imgCurrent imgMargin" alt="电子地图" />
+        <img onclick="switchMap(1)" src="images/image-map.png" class="img" alt="卫星地图" />
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

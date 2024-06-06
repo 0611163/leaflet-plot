@@ -1,0 +1,6 @@
+.p-helper-control-point-div {
+    border: 1px solid #000;
+    background-color: #ff0;
+    opacity: 0.8;
+    cursor: move;
+}
