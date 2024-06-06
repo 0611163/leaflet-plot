@@ -580,10 +580,18 @@ L.Plot.DoubleArrow = L.Polygon.extend({
         this.setPoints(latlngs)
     },
     finishDrawing: function () {
-        if (this.getPointCount() == 3 && this.tempPoint4 != null)
+        if (this.getPointCount() == 3 && this.tempPoint4 != null) {
             this._proPoints.push(this.tempPoint4);
-        if (this.connPoint != null)
+            let points = this.getPoints();
+            points.push(L.PlotUtils.unProPoints([this.tempPoint4])[0]);
+            this.setPoints(points);
+        }
+        if (this.connPoint != null) {
             this._proPoints.push(this.connPoint);
+            let points = this.getPoints();
+            points.push(L.PlotUtils.unProPoints([this.connPoint])[0]);
+            this.setPoints(points);
+        }
     },
     generate: function () {
         var count = this.getPointCount();

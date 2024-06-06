@@ -70,13 +70,6 @@ let PlotDraw = (function () {
         }
 
         if (this.plot.options.fixPointCount == this.plot.getPointCount()) {
-            if (this.plotType == L.PlotTypes.DOUBLE_ARROW) { // 钳击
-                let lng = (this.points[0][1] + this.points[1][1]) / 2;
-                let lat = (this.points[0][0] + this.points[1][0]) / 2;
-                this.points.push([lat, lng]);
-                this.plot.setPoints(this.points);
-            }
-
             this.mapDblClick(e);
         }
     }
@@ -115,6 +108,8 @@ let PlotDraw = (function () {
 
     PlotDraw.prototype.stopDraw = function () {
         this.editing = false;
+        this.plot.finishDrawing();
+        this.points = this.plot.getPoints();
         this.map.removeEventListener("click", this.mapClick, this); // 注意：添加的时候传了this，移除的时候必需要传this，否则移除不掉
         this.map.removeEventListener("dblclick", this.mapDblClick, this);
         this.map.removeEventListener("mousemove", this.mapMouseMove, this);
